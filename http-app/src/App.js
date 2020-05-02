@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import http from "./services/httpService";
 import config from "./config.json";
@@ -13,7 +12,6 @@ class App extends Component {
 
   async componentDidMount() {
     // pending > resolved (success) OR rejected (failure)
-    // const { data: posts } = await axios.get(apiEndpoint);
     const { data: posts } = await http.get(config.apiEndpoint);
     this.setState({ posts });
   }
